@@ -14,7 +14,7 @@ const IndexPage = () => (
     <form
       className="test-form"
       name="pregunta4"
-      method="post"
+      method="POST"
       data-netlify="true"
     >
       <textarea name="message"></textarea>
