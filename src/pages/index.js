@@ -17,7 +17,9 @@ const IndexPage = () => (
       method="POST"
       data-netlify="true"
     >
-      <textarea name="message"></textarea>
+      <label>
+        Respuesta:<textarea name="message"></textarea>
+      </label>
       <button type="submit">Send</button>
     </form>
     <Link to="/page-2/">Go to page 2</Link>
