@@ -2,10 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-import "./index.scss"
+import "./index.css"
 
 const IndexPage = () => (
   <Layout>
@@ -13,10 +12,11 @@ const IndexPage = () => (
     <h1>Pregunta 4</h1>
     <p>¿Con que ejercicios sientes que has aprendido más?</p>
     <form
+      className="test-form"
       name="pregunta4"
       method="post"
       data-netlify="true"
-      data-netlyfy-honeypot="bot-field"
+      data-netlify-honeypot="bot-field"
     >
       <textarea
         name="pregunta4-respuesta"

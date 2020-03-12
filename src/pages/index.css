@@ -1,0 +1,14 @@
+.test-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+textarea {
+    width: 100%;
+}
+
+button {
+    margin-top: 20px;
+    width: 200px;
+}
