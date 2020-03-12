@@ -13,18 +13,28 @@ const IndexPage = () => (
     <p>¿Con que ejercicios sientes que has aprendido más?</p>
     <form name="contact" method="POST" data-netlify="true">
       <p>
-        <label style="font-family: monospace;">Name<br /><input style="width: 100%;" type="text" name="name" /></label>   
+        <label>
+          Name
+          <input type="text" name="name" />
+        </label>
       </p>
       <p>
-        <label style="font-family: monospace;">Email<br /><input style="width: 100%;" type="email" name="email" /></label>
+        <label>
+          Email
+          <input type="email" name="email" />
+        </label>
       </p>
       <p>
-        <label style="font-family: monospace;">Message<br /><textarea style="width: 100%;" rows="15" name="message"></textarea></label>
+        <label>
+          Message
+          <textarea rows="15" name="message" />
+        </label>
       </p>
-      <div data-netlify-recaptcha="true"></div>
-      <br />
+      <div data-netlify-recaptcha="true" />
       <p>
-        <button class="send-button" type="submit">Send</button>
+        <button class="send-button" type="submit">
+          Send
+        </button>
       </p>
     </form>
     <Link to="/page-2/">Go to page 2</Link>
