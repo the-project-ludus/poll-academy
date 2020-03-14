@@ -10,13 +10,9 @@ const Styles = styled.div`
 
   form {
     display: grid;
-    grid-template-columns: minmax(4em,9em) auto;
+    grid-template-columns: 10em auto;
     grid-gap: 1em;
     margin: 0;
-  }
-
-  input {
-    max-width: 300px;
   }
 
   button {

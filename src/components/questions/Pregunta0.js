@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
-import UserContext from '../../context/UserContext';
+import { Button, FormLabel, Input } from '@material-ui/core';
 
+import UserContext from '../../context/UserContext';
 import Styles from './Styles';
 
 const Pregunta0 = ({ onSubmit }) => {
@@ -32,11 +33,13 @@ const Pregunta0 = ({ onSubmit }) => {
       <h1>Pregunta 0</h1>
       <p>¿Con que ejercicios sientes que has aprendido más?</p>
       <form className="test-form">
-        <label>Nombre y apellidos:</label>
-        <input type="text" name="nombre" onChange={handleNombreChange}></input>
-        <label>E-mail:</label>
-        <input type="text" name="email" onChange={handleEmailChange}></input>
-        <button onClick={handleSubmit}>Send</button>
+        <FormLabel>Nombre y apellidos:</FormLabel>
+        <Input type="text" name="nombre" onChange={handleNombreChange}></Input>
+        <FormLabel>E-mail:</FormLabel>
+        <Input type="text" name="email" onChange={handleEmailChange}></Input>
+        <Button variant="contained" color="primary" onClick={handleSubmit}>
+          Send
+        </Button>
       </form>
     </Styles>
   );
