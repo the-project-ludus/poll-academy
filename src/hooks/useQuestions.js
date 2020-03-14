@@ -5,6 +5,9 @@ import Pregunta4 from "../components/questions/Pregunta4"
 
 const questions = [<Pregunta0 />, <Pregunta1 />, <Pregunta4 />]
 
-const useQuestions = () => questions
+const useQuestions = onSubmit =>
+  questions.map(question =>
+    React.cloneElement(question, { onSubmit: onSubmit })
+  )
 
 export default useQuestions
