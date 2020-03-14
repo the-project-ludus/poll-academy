@@ -1,38 +1,54 @@
-import React, { useState, useContext } from "react"
-import axios from "axios"
-import UserContext from "../../context/UserContext"
+import React, { useState, useContext } from 'react';
+import axios from 'axios';
+import UserContext from '../../context/UserContext';
+import topicList from '../topicList';
 
 const Pregunta1 = ({ onSubmit }) => {
-  const [response1, setResponse1] = useState("")
-  const { user } = useContext(UserContext)
+  const [activeTopics, setActiveTopics] = useState({});
+  const { user } = useContext(UserContext);
 
   const handleSubmit = async e => {
-    e.preventDefault()
+    e.preventDefault();
     await axios.post(
-      "https://the-project-ludus-poll.firebaseio.com/questions.json",
+      'https://the-project-ludus-poll.firebaseio.com/questions.json',
       {
-        pregunta: "pregunta1",
-        response1: response1,
-        user: user,
+        pregunta: 'pregunta1',
+        response1: activeTopics,
+        user: user
       }
-    )
-    onSubmit()
-  }
+    );
+    onSubmit();
+  };
 
-  const handleResponseChange = ev => setResponse1(ev.target.value)
+  const handleCheboxChange = ev => {
+    const { name, checked } = ev.target;
+    activeTopics[name] = checked;
+    setActiveTopics(activeTopics);
+  };
   return (
     <div>
       <h1>Pregunta 1</h1>
-      <p>¿Con que ejercicios sientes que has aprendido más?</p>
+      <p>
+        Marca los 5 temas a los que, desde tu punto de vista, crees que le ha
+        faltado un poco más explicación:
+      </p>
       <form className="test-form" name="pregunta1">
-        <label>
-          Respuesta:
-          <textarea name="response1" onChange={handleResponseChange}></textarea>
-        </label>
+        <ul>
+          {topicList.map(topic => (
+            <li key={topic.id}>
+              <input
+                type="checkbox"
+                name={topic.description}
+                onChange={handleCheboxChange}
+              />
+              {topic.description}
+            </li>
+          ))}
+        </ul>
         <button onClick={handleSubmit}>Send</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Pregunta1
+export default Pregunta1;
