@@ -6,10 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.9.5",
-<<<<<<< HEAD
     "@material-ui/icons": "^4.9.1",
-=======
->>>>>>> bbb92d06a9cbeb814642af8ad299fcf8537fb68e
     "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.10.7",
     "firebase": "^7.11.0",

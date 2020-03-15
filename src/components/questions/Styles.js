@@ -21,6 +21,20 @@ const Styles = styled.div`
     justify-self: flex-end;
     grid-column: 2/3;
   }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 1em;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export default Styles;
