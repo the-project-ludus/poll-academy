@@ -1,5 +1,5 @@
 import React from 'react';
-import topicList from '../../Lists/topicList';
+import challengeList from '../../Lists/challengeList';
 import useCheckboxListQuestions from '../../hooks/useCheckboxListQuestions';
 
 const Pregunta4 = ({ onSubmit }) => {
@@ -14,7 +14,7 @@ const Pregunta4 = ({ onSubmit }) => {
       <p>¿Con que ejercicios sientes que has aprendido más?</p>
       <form className="test-form" name="pregunta4">
         <ul>
-          {topicList.map(topic => (
+          {challengeList.map(topic => (
             <li key={topic.id}>
               <input
                 type="checkbox"
