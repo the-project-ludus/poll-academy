@@ -1,5 +1,5 @@
 import React from 'react';
-import topicList from '../topicList';
+import topicList from '../../Lists/topicList';
 import useCheckboxListQuestions from '../../hooks/useCheckboxListQuestions';
 
 const Pregunta2 = ({ onSubmit }) => {
