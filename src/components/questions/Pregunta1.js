@@ -1,33 +1,16 @@
 import React, { useState, useContext } from 'react';
-import axios from 'axios';
 import { Button, Checkbox } from '@material-ui/core';
 
-import UserContext from '../../context/UserContext';
-import topicList from '../topicList';
 import Styles from './Styles';
+import topicList from '../../Lists/topicList';
+import useCheckboxListQuestions from '../../hooks/useCheckboxListQuestions';
 
 const Pregunta1 = ({ onSubmit }) => {
-  const [activeTopics, setActiveTopics] = useState({});
-  const { user } = useContext(UserContext);
+  const [handleSubmit, handleCheboxChange] = useCheckboxListQuestions(
+    'pregunta1',
+    onSubmit
+  );
 
-  const handleSubmit = async e => {
-    e.preventDefault();
-    await axios.post(
-      'https://the-project-ludus-poll.firebaseio.com/questions.json',
-      {
-        pregunta: 'pregunta1',
-        response1: activeTopics,
-        user: user
-      }
-    );
-    onSubmit();
-  };
-
-  const handleCheboxChange = ev => {
-    const { name, checked } = ev.target;
-    activeTopics[name] = checked;
-    setActiveTopics(activeTopics);
-  };
   return (
     <Styles>
       <h1>Pregunta 1</h1>
