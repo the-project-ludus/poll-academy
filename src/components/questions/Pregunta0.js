@@ -17,7 +17,7 @@ const Pregunta0 = ({ onSubmit }) => {
     await axios.post(
       'https://the-project-ludus-poll.firebaseio.com/questions.json',
       {
-        pregunta: 'pregunta0',
+        pregunta: '¿Con que ejercicios sientes que has aprendido más?',
         nombre: nombre,
         email: email
       }

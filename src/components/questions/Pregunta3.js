@@ -7,7 +7,7 @@ import useCheckboxListQuestions from '../../hooks/useCheckboxListQuestions';
 
 const Pregunta3 = ({ onSubmit }) => {
   const [handleSubmit, handleCheboxChange] = useCheckboxListQuestions(
-    'pregunta3',
+    'Marca los temas donde has echado de menos más ejercicios',
     onSubmit
   );
 
