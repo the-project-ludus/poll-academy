@@ -59,11 +59,11 @@ const Pregunta8 = ({ onSubmit }) => {
           <label>¿Y cuanto pagarías?</label>
           <input type="text" onChange={handleMoneyChange} value={money}></input>
           €
-          <Button variant="contained" color="primary" onClick={handleSubmit}>
-            Send
-          </Button>
         </form>
       )}
+      <Button variant="contained" color="primary" onClick={handleSubmit}>
+        Send
+      </Button>
     </Styles>
   );
 };
