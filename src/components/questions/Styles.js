@@ -9,27 +9,26 @@ const Styles = styled.div`
   display: grid;
   min-width: 265px;
 
-  form {
+  form.test-form {
     display: grid;
     grid-template-columns: 10em auto;
     grid-gap: 1em;
     margin: 0;
-  }
 
-  button {
-    width: 100%;
-    max-width: 158px;
-    justify-self: flex-end;
-    grid-column: 2/3;
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-    grid-gap: 1em;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      grid-gap: 1em;
+    }
+    button {
+      width: 100%;
+      max-width: 158px;
+      justify-self: flex-end;
+      grid-column: 2/3;
+    }
   }
 
   @media screen and (min-width: 370px) {
