@@ -8,6 +8,7 @@ import Pregunta5 from '../components/questions/Pregunta5';
 import Pregunta6 from '../components/questions/Pregunta6';
 import Pregunta7 from '../components/questions/Pregunta7';
 import Pregunta8 from '../components/questions/Pregunta8';
+import Pregunta9 from '../components/questions/Pregunta9';
 
 const questions = [
   <Pregunta0 />,
@@ -18,7 +19,8 @@ const questions = [
   <Pregunta5 />,
   <Pregunta6 />,
   <Pregunta7 />,
-  <Pregunta8 />
+  <Pregunta8 />,
+  <Pregunta9 />
 ];
 
 const useQuestions = onSubmit =>
