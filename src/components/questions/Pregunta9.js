@@ -12,12 +12,14 @@ const Pregunta9 = () => {
   return (
     <Styles>
       <h1>¿Has terminado la bootcamp?</h1>
-      <Button variant="contained" color="primary" onClick={handleYes}>
-        Si
-      </Button>
-      <Button variant="contained" color="secondary" onClick={handleNo}>
-        No
-      </Button>
+      <div className="buttons">
+        <Button variant="contained" color="primary" onClick={handleYes}>
+          Si
+        </Button>
+        <Button variant="contained" color="secondary" onClick={handleNo}>
+          No
+        </Button>
+      </div>
     </Styles>
   );
 };
