@@ -23,40 +23,41 @@ const Styles = styled.div`
       grid-template-columns: repeat(1, auto);
       grid-gap: 1em;
     }
+
+    @media screen and (min-width: 370px) {
+      ul {
+        grid-template-columns: repeat(2, auto);
+      }
+    }
+
+    @media screen and (min-width: 500px) {
+      ul {
+        grid-template-columns: repeat(3, auto);
+      }
+    }
+
+    @media screen and (min-width: 700px) {
+      ul {
+        grid-template-columns: repeat(4, auto);
+      }
+    }
+    @media screen and (min-width: 800px) {
+      ul {
+        grid-template-columns: repeat(5, auto);
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+    
     button {
       width: 100%;
       max-width: 158px;
       justify-self: flex-end;
       grid-column: 2/3;
     }
-  }
-
-  @media screen and (min-width: 370px) {
-    ul {
-      grid-template-columns: repeat(2, auto);
-    }
-  }
-
-  @media screen and (min-width: 500px) {
-    ul {
-      grid-template-columns: repeat(3, auto);
-    }
-  }
-
-  @media screen and (min-width: 700px) {
-    ul {
-      grid-template-columns: repeat(4, auto);
-    }
-  }
-  @media screen and (min-width: 800px) {
-    ul {
-      grid-template-columns: repeat(5, auto);
-    }
-  }
-
-  li {
-    display: flex;
-    align-items: center;
   }
 `;
 
