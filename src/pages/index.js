@@ -10,7 +10,7 @@ import SEO from '../components/seo';
 import './index.css';
 
 const IndexPage = () => {
-  const [questionId, setQuestionId] = useState(10);
+  const [questionId, setQuestionId] = useState(11);
   const [user, setUser] = useState('');
   const questionComponents = useQuestions(() => setQuestionId(questionId + 1));
 
