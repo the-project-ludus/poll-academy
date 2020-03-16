@@ -63,7 +63,7 @@ const Pregunta8 = ({ onSubmit }) => {
           </>
         )}
         <Button variant="contained" color="primary" onClick={handleSubmit}>
-          Send
+          Siguiente
         </Button>
       </form>
     </Styles>

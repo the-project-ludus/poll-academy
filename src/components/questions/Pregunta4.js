@@ -28,7 +28,7 @@ const Pregunta4 = ({ onSubmit }) => {
           ))}
         </ul>
         <Button variant="contained" color="primary" onClick={handleSubmit}>
-          Send
+          Siguiente
         </Button>
       </form>
     </Styles>
