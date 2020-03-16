@@ -9,8 +9,8 @@ const topicList = [
   { id: 8, description: 'CSS: GRID' },
   { id: 9, description: 'CSS: MediaQuery' },
   { id: 10, description: 'Sass' },
-  { id: 11, description: 'JS, Arrays, Objects, strings' },
-  { id: 12, description: 'JS, functions, scope, higher-order-functions' },
+  { id: 11, description: 'JS, data types' },
+  { id: 12, description: 'JS, functions, scope' },
   { id: 13, description: 'JS, prototype, inheritance' },
   { id: 14, description: 'Regex' },
   { id: 15, description: 'TDD, JEST' },
@@ -22,13 +22,13 @@ const topicList = [
   { id: 21, description: 'Promises' },
   {
     id: 22,
-    description: 'React Basic, JSX, rendering elements, state, events'
+    description: 'React Basic'
   },
   { id: 23, description: 'React, hooks' },
   { id: 24, description: 'React+Jest+Enzyme' },
   { id: 25, description: 'React router' },
   { id: 26, description: 'React Hoc' },
-  { id: 27, description: 'React Suspense and lazy load' },
+  { id: 27, description: 'React Suspense' },
   { id: 28, description: 'Redux' },
   { id: 29, description: 'NextJs' },
   { id: 30, description: 'Firebase' },

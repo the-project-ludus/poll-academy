@@ -7,16 +7,13 @@ const Styles = styled.div`
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   padding: 21px;
   display: grid;
+  min-width: 265px;
 
   form {
     display: grid;
-    grid-template-columns: minmax(4em,9em) auto;
+    grid-template-columns: 10em auto;
     grid-gap: 1em;
     margin: 0;
-  }
-
-  input {
-    max-width: 300px;
   }
 
   button {
@@ -24,6 +21,43 @@ const Styles = styled.div`
     max-width: 158px;
     justify-self: flex-end;
     grid-column: 2/3;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-gap: 1em;
+  }
+
+  @media screen and (min-width: 370px) {
+    ul {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+
+  @media screen and (min-width: 500px) {
+    ul {
+      grid-template-columns: repeat(3, auto);
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    ul {
+      grid-template-columns: repeat(4, auto);
+    }
+  }
+  @media screen and (min-width: 800px) {
+    ul {
+      grid-template-columns: repeat(5, auto);
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
   }
 `;
 

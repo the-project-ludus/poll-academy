@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+import { Button, Checkbox } from '@material-ui/core';
+
+import Styles from './Styles';
 import topicList from '../../Lists/topicList';
 import useCheckboxListQuestions from '../../hooks/useCheckboxListQuestions';
 
@@ -9,7 +12,7 @@ const Pregunta1 = ({ onSubmit }) => {
   );
 
   return (
-    <div>
+    <Styles>
       <h1>Pregunta 1</h1>
       <p>
         Marca los 5 temas a los que, desde tu punto de vista, crees que le ha
@@ -19,8 +22,7 @@ const Pregunta1 = ({ onSubmit }) => {
         <ul>
           {topicList.map(topic => (
             <li key={topic.id}>
-              <input
-                type="checkbox"
+              <Checkbox
                 name={topic.description}
                 onChange={handleCheboxChange}
               />
@@ -28,9 +30,11 @@ const Pregunta1 = ({ onSubmit }) => {
             </li>
           ))}
         </ul>
-        <button onClick={handleSubmit}>Send</button>
+        <Button variant="contained" color="primary" onClick={handleSubmit}>
+          Send
+        </Button>
       </form>
-    </div>
+    </Styles>
   );
 };
 
