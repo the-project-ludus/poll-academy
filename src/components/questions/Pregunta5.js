@@ -23,7 +23,7 @@ const Pregunta5 = ({ onSubmit }) => {
     await axios.post(
       'https://the-project-ludus-poll.firebaseio.com/questions.json',
       {
-        pregunta: 'pregunta5',
+        pregunta: '¿Algun ejercicio te ha parecido demasiado difícil?',
         what: what,
         improvement: improvement,
         user: user

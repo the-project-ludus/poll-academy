@@ -7,7 +7,7 @@ import useCheckboxListQuestions from '../../hooks/useCheckboxListQuestions';
 
 const Pregunta2 = ({ onSubmit }) => {
   const [handleSubmit, handleCheboxChange] = useCheckboxListQuestions(
-    'pregunta2',
+    'Marca los 5 temas sobre los que te gustaría seguir profundizando',
     onSubmit
   );
 
