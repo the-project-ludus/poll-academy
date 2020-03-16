@@ -31,7 +31,7 @@ const Pregunta0 = ({ onSubmit }) => {
   return (
     <Styles>
       <h1>Pregunta 0</h1>
-      <p>¿Con que ejercicios sientes que has aprendido más?</p>
+      <FormLabel>¿Con que ejercicios sientes que has aprendido más?</FormLabel>
       <form className="test-form">
         <FormLabel>Nombre y apellidos:</FormLabel>
         <Input type="text" name="nombre" onChange={handleNombreChange}></Input>

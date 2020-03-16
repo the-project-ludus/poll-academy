@@ -15,7 +15,7 @@ const Pregunta10 = ({ onSubmit }) => {
     await axios.post(
       'https://the-project-ludus-poll.firebaseio.com/questions.json',
       {
-        pregunta: '¿Por donde crees que debería seguir tu formación?',
+        pregunta: '¿Por donde te gustaría seguir tu formación?',
         response: response,
         user: user
       }
@@ -27,9 +27,12 @@ const Pregunta10 = ({ onSubmit }) => {
   return (
     <Styles>
       <h1>Pregunta 10</h1>
-      <FormLabel>¿Por donde crees que debería seguir tu formación?</FormLabel>
-      <form className="test-form">
-        <TextareaAutosize onChange={handleResponseChange}></TextareaAutosize>
+      <FormLabel>¿Por donde te gustaría seguir tu formación?</FormLabel>
+      <form className="textarea-form">
+        <TextareaAutosize
+          rows={8}
+          onChange={handleResponseChange}
+        ></TextareaAutosize>
         <Button variant="contained" color="primary" onClick={handleSubmit}>
           Siguiente
         </Button>
