@@ -1,24 +1,23 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import { Button, Checkbox, FormLabel, InputLabel } from '@material-ui/core';
 
 import Styles from './Styles';
 import topicList from '../../Lists/topicList';
 import useCheckboxListQuestions from '../../hooks/useCheckboxListQuestions';
 
-const Pregunta1 = ({ onSubmit }) => {
+const Pregunta3 = ({ onSubmit }) => {
   const [handleSubmit, handleCheboxChange] = useCheckboxListQuestions(
-    'Marca los 5 temas a los que, desde tu punto de vista, crees que le ha faltado un poco más explicación',
+    'Marca los temas donde has echado de menos más ejercicios',
     onSubmit
   );
 
   return (
     <Styles>
-      <h1>Pregunta 1</h1>
+      <h1>Pregunta 3</h1>
       <FormLabel>
-        Marca los 5 temas a los que, desde tu punto de vista, crees que le ha
-        faltado un poco más explicación:
+        Marca los temas donde has echado de menos más ejercicios.
       </FormLabel>
-      <form className="test-form" name="pregunta1">
+      <form className="test-form" name="pregunta3">
         <ul>
           {topicList.map(topic => (
             <li key={topic.id}>
@@ -38,4 +37,4 @@ const Pregunta1 = ({ onSubmit }) => {
   );
 };
 
-export default Pregunta1;
+export default Pregunta3;

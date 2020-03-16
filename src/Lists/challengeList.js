@@ -1,0 +1,41 @@
+const challengeList = [
+  { id: 1, description: 'Base SkyLab Folder Structure' },
+  { id: 2, description: 'PreCourse Document' },
+  { id: 3, description: 'SkyLab BootCamp Github Repo' },
+  { id: 4, description: 'Curriculum Vitae I' },
+  { id: 5, description: 'Styled Curriculum Vitae I' },
+  { id: 6, description: 'CSS Diner' },
+  { id: 7, description: 'Flexboxdefense' },
+  { id: 8, description: 'Flex-nav' },
+  { id: 9, description: 'Flex-box' },
+  { id: 10, description: 'Navbar responsive' },
+  { id: 11, description: 'GRID Monopoly' },
+  { id: 12, description: 'Grid responsive' },
+  { id: 13, description: 'WEB Photo GAMMA' },
+  { id: 14, description: 'Basic Data Types Operations' },
+  { id: 15, description: 'Control flow' },
+  { id: 16, description: 'Strings 1' },
+  { id: 17, description: 'Arrays' },
+  { id: 18, description: 'Objects' },
+  { id: 19, description: 'Strings 2' },
+  { id: 20, description: 'Strings 3' },
+  { id: 21, description: 'Recursion' },
+  {
+    id: 22,
+    description: 'Higher Order Functions'
+  },
+  { id: 23, description: 'Rock, Paper, Scissors' },
+  { id: 24, description: 'jQuery Rock, Paper, Scissors' },
+  { id: 25, description: 'slick' },
+  { id: 26, description: 'Beers API I' },
+  { id: 27, description: 'Users API' },
+  { id: 28, description: 'Beers API Pro' },
+  { id: 29, description: 'React TODO List' },
+  { id: 30, description: 'React Beers' },
+  { id: 31, description: 'React router' },
+  { id: 32, description: 'React Movies' },
+  { id: 33, description: ' Firebase with Movies' },
+  { id: 34, description: 'Firebase project' }
+];
+
+export default challengeList;

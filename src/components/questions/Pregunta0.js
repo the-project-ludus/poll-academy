@@ -1,51 +1,48 @@
-import React, { useContext, useState } from "react"
-import axios from "axios"
-import UserContext from "../../context/UserContext"
+import React, { useContext, useState } from 'react';
+import axios from 'axios';
+import { Button, FormLabel, Input } from '@material-ui/core';
+
+import UserContext from '../../context/UserContext';
+import Styles from './Styles';
 
 const Pregunta0 = ({ onSubmit }) => {
-  const [nombre, setNombre] = useState("")
-  const [email, setEmail] = useState("")
-  const { user, setUser } = useContext(UserContext)
+  const [nombre, setNombre] = useState('');
+  const [email, setEmail] = useState('');
+  const { user, setUser } = useContext(UserContext);
 
   const handleSubmit = async e => {
-    e.preventDefault()
-    setUser(email)
-    console.log("user", user)
+    e.preventDefault();
+    setUser(email);
+    console.log('user', user);
     await axios.post(
-      "https://the-project-ludus-poll.firebaseio.com/questions.json",
+      'https://the-project-ludus-poll.firebaseio.com/questions.json',
       {
-        pregunta: "pregunta0",
+        pregunta: '¿Con que ejercicios sientes que has aprendido más?',
         nombre: nombre,
-        email: email,
+        email: email
       }
-    )
-    onSubmit()
-  }
+    );
+    onSubmit();
+  };
 
-  const handleNombreChange = ev => setNombre(ev.target.value)
-  const handleEmailChange = ev => setEmail(ev.target.value)
+  const handleNombreChange = ev => setNombre(ev.target.value);
+  const handleEmailChange = ev => setEmail(ev.target.value);
 
   return (
-    <div>
+    <Styles>
       <h1>Pregunta 0</h1>
-      <p>¿Con que ejercicios sientes que has aprendido más?</p>
+      <FormLabel>¿Con que ejercicios sientes que has aprendido más?</FormLabel>
       <form className="test-form">
-        <label>
-          Nombre y apellidos:
-          <input
-            type="text"
-            name="nombre"
-            onChange={handleNombreChange}
-          ></input>
-        </label>
-        <label>
-          E-mail:
-          <input type="text" name="email" onChange={handleEmailChange}></input>
-        </label>
-        <button onClick={handleSubmit}>Send</button>
+        <FormLabel>Nombre y apellidos:</FormLabel>
+        <Input type="text" name="nombre" onChange={handleNombreChange}></Input>
+        <FormLabel>E-mail:</FormLabel>
+        <Input type="text" name="email" onChange={handleEmailChange}></Input>
+        <Button variant="contained" color="primary" onClick={handleSubmit}>
+          Siguiente
+        </Button>
       </form>
-    </div>
-  )
-}
+    </Styles>
+  );
+};
 
-export default Pregunta0
+export default Pregunta0;
