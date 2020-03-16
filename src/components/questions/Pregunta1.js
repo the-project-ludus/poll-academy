@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Button, Checkbox } from '@material-ui/core';
+import { Button, Checkbox, FormLabel, InputLabel } from '@material-ui/core';
 
 import Styles from './Styles';
 import topicList from '../../Lists/topicList';
@@ -14,10 +14,10 @@ const Pregunta1 = ({ onSubmit }) => {
   return (
     <Styles>
       <h1>Pregunta 1</h1>
-      <p>
+      <FormLabel>
         Marca los 5 temas a los que, desde tu punto de vista, crees que le ha
         faltado un poco más explicación:
-      </p>
+      </FormLabel>
       <form className="test-form" name="pregunta1">
         <ul>
           {topicList.map(topic => (
@@ -26,7 +26,7 @@ const Pregunta1 = ({ onSubmit }) => {
                 name={topic.description}
                 onChange={handleCheboxChange}
               />
-              {topic.description}
+              <InputLabel>{topic.description}</InputLabel>
             </li>
           ))}
         </ul>

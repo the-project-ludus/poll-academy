@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import UserContext from '../../context/UserContext';
-import { Button } from '@material-ui/core';
+import { Button, Radio, FormLabel, InputLabel } from '@material-ui/core';
 import Styles from './Styles';
 
 const Pregunta6 = ({ onSubmit }) => {
@@ -32,29 +32,23 @@ const Pregunta6 = ({ onSubmit }) => {
   return (
     <Styles>
       <h1>Pregunta 6</h1>
-      <p>
+      <FormLabel>
         ¿Crees que aprenderías mas o aprovecharías mas el curso, haciendo
         sesiones online durante la semana para reforzar ampliar temas?
-      </p>
-      <form>
-        <label>
-          <input
-            type="radio"
+      </FormLabel>
+      <form className="test-form">
+        <InputLabel>
+          <Radio
             value="false"
             checked={!response}
             onChange={handleRadioChange}
           />
           No
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="true"
-            checked={response}
-            onChange={handleRadioChange}
-          />
+        </InputLabel>
+        <InputLabel>
+          <Radio value="true" checked={response} onChange={handleRadioChange} />
           Sí
-        </label>
+        </InputLabel>
         <Button variant="contained" color="primary" onClick={handleSubmit}>
           Send
         </Button>

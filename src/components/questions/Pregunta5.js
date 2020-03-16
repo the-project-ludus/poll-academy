@@ -5,7 +5,8 @@ import {
   Radio,
   Input,
   TextareaAutosize,
-  InputLabel
+  InputLabel,
+  FormLabel
 } from '@material-ui/core';
 
 import UserContext from '../../context/UserContext';
@@ -43,7 +44,7 @@ const Pregunta5 = ({ onSubmit }) => {
   return (
     <Styles>
       <h1>Pregunta 5</h1>
-      <p>¿Algun ejercicio te ha parecido demasiado difícil?</p>
+      <FormLabel>¿Algun ejercicio te ha parecido demasiado difícil?</FormLabel>
       <form className="test-form">
         <InputLabel>
           <Radio

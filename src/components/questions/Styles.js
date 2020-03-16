@@ -13,7 +13,7 @@ const Styles = styled.div`
     display: grid;
     grid-template-columns: 10em auto;
     grid-gap: 1em;
-    margin: 0;
+    margin: 2em 0;
 
     ul {
       list-style-type: none;
@@ -51,12 +51,34 @@ const Styles = styled.div`
       display: flex;
       align-items: center;
     }
-    
+
     button {
       width: 100%;
       max-width: 158px;
       justify-self: flex-end;
       grid-column: 2/3;
+    }
+  }
+
+  form.no-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    button {
+      width: 100%;
+      max-width: 158px;
+      justify-self: flex-end;
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    ul {
+      margin-top: 1em;
+
+      li {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 `;

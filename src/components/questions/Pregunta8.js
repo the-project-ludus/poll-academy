@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
+import { Button, Radio, Input, FormLabel, InputLabel } from '@material-ui/core';
+
 import UserContext from '../../context/UserContext';
-import { Button } from '@material-ui/core';
 import Styles from './Styles';
 
 const Pregunta8 = ({ onSubmit }) => {
@@ -35,35 +36,36 @@ const Pregunta8 = ({ onSubmit }) => {
   return (
     <Styles>
       <h1>Pregunta 8</h1>
-      <p>¿Considerías apuntarte a estas sesiones por un precio de 450€?</p>
-      <label>
-        <input
-          type="radio"
-          value="false"
-          checked={!response}
-          onChange={handleRadioChange}
-        />
-        Sí
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="true"
-          checked={response}
-          onChange={handleRadioChange}
-        />
-        No
-      </label>
-      {response && (
-        <form className="test-form">
-          <label>¿Y cuanto pagarías?</label>
-          <input type="text" onChange={handleMoneyChange} value={money}></input>
-          €
-        </form>
-      )}
-      <Button variant="contained" color="primary" onClick={handleSubmit}>
-        Send
-      </Button>
+      <FormLabel>
+        ¿Considerías apuntarte a estas sesiones por un precio de 450€?
+      </FormLabel>
+      <form className="test-form">
+        <InputLabel>
+          <Radio
+            value="false"
+            checked={!response}
+            onChange={handleRadioChange}
+          />
+          Sí
+        </InputLabel>
+        <InputLabel>
+          <Radio value="true" checked={response} onChange={handleRadioChange} />
+          No
+        </InputLabel>
+        {response && (
+          <>
+            <InputLabel>¿Y cuanto pagarías?</InputLabel>
+            <Input
+              type="text"
+              onChange={handleMoneyChange}
+              placeholder={`${money}€`}
+            ></Input>
+          </>
+        )}
+        <Button variant="contained" color="primary" onClick={handleSubmit}>
+          Send
+        </Button>
+      </form>
     </Styles>
   );
 };
