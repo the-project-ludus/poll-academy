@@ -13,7 +13,7 @@ const Styles = styled.div`
     display: grid;
     grid-template-columns: 10em auto;
     grid-gap: 1em;
-    margin: 0;
+    margin: 2em 0;
 
     ul {
       list-style-type: none;
@@ -23,6 +23,35 @@ const Styles = styled.div`
       grid-template-columns: repeat(1, auto);
       grid-gap: 1em;
     }
+
+    @media screen and (min-width: 370px) {
+      ul {
+        grid-template-columns: repeat(2, auto);
+      }
+    }
+
+    @media screen and (min-width: 500px) {
+      ul {
+        grid-template-columns: repeat(3, auto);
+      }
+    }
+
+    @media screen and (min-width: 700px) {
+      ul {
+        grid-template-columns: repeat(4, auto);
+      }
+    }
+    @media screen and (min-width: 800px) {
+      ul {
+        grid-template-columns: repeat(5, auto);
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+
     button {
       width: 100%;
       max-width: 158px;
@@ -31,32 +60,26 @@ const Styles = styled.div`
     }
   }
 
-  @media screen and (min-width: 370px) {
-    ul {
-      grid-template-columns: repeat(2, auto);
-    }
-  }
+  form.no-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-  @media screen and (min-width: 500px) {
-    ul {
-      grid-template-columns: repeat(3, auto);
+    button {
+      width: 100%;
+      max-width: 158px;
+      justify-self: flex-end;
+      grid-column: 2;
+      grid-row: 2;
     }
-  }
 
-  @media screen and (min-width: 700px) {
     ul {
-      grid-template-columns: repeat(4, auto);
-    }
-  }
-  @media screen and (min-width: 800px) {
-    ul {
-      grid-template-columns: repeat(5, auto);
-    }
-  }
+      margin-top: 1em;
 
-  li {
-    display: flex;
-    align-items: center;
+      li {
+        display: flex;
+        align-items: center;
+      }
+    }
   }
 `;
 

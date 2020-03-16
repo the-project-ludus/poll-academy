@@ -1,7 +1,15 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
-import UserContext from '../../context/UserContext';
+import {
+  Button,
+  Radio,
+  Input,
+  TextareaAutosize,
+  InputLabel,
+  FormLabel
+} from '@material-ui/core';
 
+import UserContext from '../../context/UserContext';
 import Styles from './Styles';
 
 const Pregunta5 = ({ onSubmit }) => {
@@ -36,34 +44,38 @@ const Pregunta5 = ({ onSubmit }) => {
   return (
     <Styles>
       <h1>Pregunta 5</h1>
-      <p>¿Algun ejercicio te ha parecido demasiado difícil?</p>
-      <label>
-        <input
-          type="radio"
-          value="false"
-          checked={!hardRadio}
-          onChange={handleHardRadioChange}
-        />
-        No
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="true"
-          checked={hardRadio}
-          onChange={handleHardRadioChange}
-        />
-        Sí
-      </label>
-      {hardRadio && (
-        <form className="test-form">
-          <label>¿Cual?</label>
-          <input type="text" onChange={handleWhatChange}></input>
-          <label>¿Como lo mejorarías?</label>
-          <textarea onChange={handleImprovementChange}></textarea>
-          <button onClick={handleSubmit}>Send</button>
-        </form>
-      )}
+      <FormLabel>¿Algun ejercicio te ha parecido demasiado difícil?</FormLabel>
+      <form className="test-form">
+        <InputLabel>
+          <Radio
+            value="false"
+            checked={!hardRadio}
+            onChange={handleHardRadioChange}
+          />
+          No
+        </InputLabel>
+        <InputLabel>
+          <Radio
+            value="true"
+            checked={hardRadio}
+            onChange={handleHardRadioChange}
+          />
+          Sí
+        </InputLabel>
+        {hardRadio && (
+          <>
+            <InputLabel>¿Cual?</InputLabel>
+            <Input type="text" onChange={handleWhatChange}></Input>
+            <InputLabel>¿Como lo mejorarías?</InputLabel>
+            <TextareaAutosize
+              onChange={handleImprovementChange}
+            ></TextareaAutosize>
+          </>
+        )}
+        <Button variant="contained" color="primary" onClick={handleSubmit}>
+          Siguiente
+        </Button>
+      </form>
     </Styles>
   );
 };

@@ -38,7 +38,7 @@ const Pregunta0 = ({ onSubmit }) => {
         <FormLabel>E-mail:</FormLabel>
         <Input type="text" name="email" onChange={handleEmailChange}></Input>
         <Button variant="contained" color="primary" onClick={handleSubmit}>
-          Send
+          Siguiente
         </Button>
       </form>
     </Styles>

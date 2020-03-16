@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-import { Button, Checkbox } from '@material-ui/core';
+import React from 'react';
+import { Button, Checkbox, FormLabel, InputLabel } from '@material-ui/core';
 
 import Styles from './Styles';
 import useCheckboxListQuestions from '../../hooks/useCheckboxListQuestions';
@@ -19,24 +19,26 @@ const Pregunta7 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 7</h1>
-      <p>¿Como te gustaría que fueran esas sesiones?</p>
-      <form>
-        <ul>
-          {topicList.map(topic => (
-            <li key={topic.id}>
-              <Checkbox
-                name={topic.description}
-                onChange={handleCheboxChange}
-              />
-              {topic.description}
-            </li>
-          ))}
-        </ul>
-        <Button variant="contained" color="primary" onClick={handleSubmit}>
-          Send
-        </Button>
-      </form>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <h1>Pregunta 7</h1>
+        <FormLabel>¿Como te gustaría que fueran esas sesiones?</FormLabel>
+        <form className="no-grid">
+          <ul style={{ listStyle: 'none' }}>
+            {topicList.map(topic => (
+              <li key={topic.id}>
+                <Checkbox
+                  name={topic.description}
+                  onChange={handleCheboxChange}
+                />
+                <InputLabel>{topic.description}</InputLabel>
+              </li>
+            ))}
+          </ul>
+          <Button variant="contained" color="primary" onClick={handleSubmit}>
+            Siguiente
+          </Button>
+        </form>
+      </div>
     </Styles>
   );
 };
