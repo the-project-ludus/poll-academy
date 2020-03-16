@@ -9,14 +9,9 @@ import SEO from '../components/seo';
 import './index.css';
 
 const IndexPage = () => {
-  const [questionId, setQuestionId] = useState(1);
+  const [questionId, setQuestionId] = useState(0);
   const [user, setUser] = useState('');
   const questionComponents = useQuestions(() => setQuestionId(questionId + 1));
-
-  const llamada = () =>
-    axios.post('https://the-project-ludus-poll.firebaseio.com/questions.json', {
-      nombre: 'antonio'
-    });
 
   return (
     <Layout>
@@ -24,7 +19,6 @@ const IndexPage = () => {
       <UserContext.Provider value={{ user, setUser }}>
         {questionComponents[questionId]}
       </UserContext.Provider>
-      <button onClick={llamada}>Llamada</button>
     </Layout>
   );
 };
