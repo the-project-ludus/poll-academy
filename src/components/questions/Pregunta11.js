@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import { Radio, InputLabel, Input, FormLabel, Button } from '@material-ui/core';
+import styled from 'styled-components';
 
 import UserContext from '../../context/UserContext';
 import Styles from './Styles';
@@ -68,29 +69,16 @@ const Pregunta11 = ({ onSubmit }) => {
             'Arquitectura Front-End  + otros frameworks, Angular, Vue.js..'
           ].map(topic => {
             return (
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gridColumn: '2 span'
-                }}
-                key={topic}
-              >
+              <RadioGroup key={topic}>
                 <InputLabel>{topic}</InputLabel>
                 <div
                   style={{
                     display: 'flex',
                     justifyContent: 'flex-end',
-                    padding: '16px'
+                    padding: '8px'
                   }}
                 >
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      marginRight: '8px'
-                    }}
-                  >
+                  <TopicWrapper>
                     <Radio
                       size="small"
                       value={1}
@@ -99,14 +87,8 @@ const Pregunta11 = ({ onSubmit }) => {
                       checked={marks[topic] === '1'}
                     />
                     <InputLabel>1</InputLabel>
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      marginRight: '8px'
-                    }}
-                  >
+                  </TopicWrapper>
+                  <TopicWrapper>
                     <Radio
                       size="small"
                       value={2}
@@ -115,14 +97,8 @@ const Pregunta11 = ({ onSubmit }) => {
                       checked={marks[topic] === '2'}
                     />
                     <InputLabel>2</InputLabel>
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      marginRight: '8px'
-                    }}
-                  >
+                  </TopicWrapper>
+                  <TopicWrapper>
                     <Radio
                       size="small"
                       value={3}
@@ -131,14 +107,8 @@ const Pregunta11 = ({ onSubmit }) => {
                       checked={marks[topic] === '3'}
                     />
                     <InputLabel>3</InputLabel>
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      marginRight: '8px'
-                    }}
-                  >
+                  </TopicWrapper>
+                  <TopicWrapper>
                     <Radio
                       size="small"
                       value={4}
@@ -147,14 +117,8 @@ const Pregunta11 = ({ onSubmit }) => {
                       checked={marks[topic] === '4'}
                     />
                     <InputLabel>4</InputLabel>
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      marginRight: '8px'
-                    }}
-                  >
+                  </TopicWrapper>
+                  <TopicWrapper>
                     <Radio
                       size="small"
                       value={5}
@@ -163,9 +127,9 @@ const Pregunta11 = ({ onSubmit }) => {
                       checked={marks[topic] === '5'}
                     />
                     <InputLabel>5</InputLabel>
-                  </div>
+                  </TopicWrapper>
                 </div>
-              </div>
+              </RadioGroup>
             );
           })}
         <FormLabel style={{ gridColumn: '1', padding: '16px 0' }}>
@@ -184,5 +148,32 @@ const Pregunta11 = ({ onSubmit }) => {
     </Styles>
   );
 };
+
+const RadioGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 2 span;
+  margin-bottom: 21px;
+
+  @media screen and (min-width: 800px) {
+    & {
+      flex-direction: row;
+      margin-bottom: 0;
+    }
+  }
+`;
+
+const TopicWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 3px;
+
+  @media screen and (min-width: 800px) {
+    & {
+      margin-right: 8px;
+    }
+  }
+`;
 
 export default Pregunta11;

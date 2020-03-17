@@ -1,10 +1,14 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import UserContext from '../context/UserContext';
 
 function useCheckboxListQuestions(pregunta, onSubmit) {
   const [activeTopics, setActiveTopics] = useState({});
   const { user } = useContext(UserContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = async e => {
     e.preventDefault();

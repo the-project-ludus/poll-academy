@@ -24,7 +24,7 @@ const Styles = styled.div`
       grid-gap: 1em;
     }
 
-    @media screen and (min-width: 370px) {
+    @media screen and (min-width: 380px) {
       ul {
         grid-template-columns: repeat(2, auto);
       }
@@ -85,6 +85,11 @@ const Styles = styled.div`
   .buttons {
     display: flex;
     justify-content: space-around;
+    max-width: 300px;
+
+    button {
+      max-width: 120px;
+    }
 
     button:hover {
       animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
@@ -112,6 +117,26 @@ const Styles = styled.div`
         60% {
           transform: translate3d(4px, 0, 0);
         }
+      }
+    }
+  }
+
+  @media screen and (min-width: 400px) {
+    .buttons {
+      max-width: 400px;
+
+      button {
+        max-width: 150px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 500px) {
+    .buttons {
+      max-width: none;
+
+      button {
+        max-width: none;
       }
     }
   }

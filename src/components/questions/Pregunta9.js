@@ -10,7 +10,7 @@ const Pregunta9 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h2>¿Has terminado la bootcamp?</h2>
+      <h2>¿Has terminado el bootcamp?</h2>
       <div className="buttons">
         <Button variant="contained" color="primary" onClick={onSubmit}>
           Si

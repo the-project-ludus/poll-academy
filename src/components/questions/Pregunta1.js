@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-import { Button, Checkbox, FormLabel, InputLabel } from '@material-ui/core';
+import React, { useEffect } from 'react';
+import { Button, Checkbox, InputLabel } from '@material-ui/core';
 
 import Styles from './Styles';
 import topicList from '../../Lists/topicList';
@@ -10,6 +10,7 @@ const Pregunta1 = ({ onSubmit }) => {
     'Marca los 5 temas a los que, desde tu punto de vista, crees que le ha faltado un poco más explicación',
     onSubmit
   );
+
 
   return (
     <Styles>
