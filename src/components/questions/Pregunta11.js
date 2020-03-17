@@ -46,7 +46,7 @@ const Pregunta11 = ({ onSubmit }) => {
     <Styles>
       <h1>Pregunta 11</h1>
       <FormLabel>¿Te apuntarías a un curso de especialización?</FormLabel>
-      <form>
+      <form style={{ display: 'grid', gridTemplateColumns: '1fr auto' }}>
         <InputLabel>
           <Radio value="true" checked={response} onChange={handleRadioChange} />
           Sí
@@ -68,44 +68,106 @@ const Pregunta11 = ({ onSubmit }) => {
             'Arquitectura Front-End  + otros frameworks, Angular, Vue.js..'
           ].map(topic => {
             return (
-              <InputLabel key={topic}>
-                <input
-                  type="radio"
-                  value={1}
-                  name={topic}
-                  onChange={handleMarkChange}
-                />
-                <input
-                  type="radio"
-                  value={2}
-                  name={topic}
-                  onChange={handleMarkChange}
-                />
-                <input
-                  type="radio"
-                  value={3}
-                  name={topic}
-                  onChange={handleMarkChange}
-                />
-                <input
-                  type="radio"
-                  value={4}
-                  name={topic}
-                  onChange={handleMarkChange}
-                />
-                <input
-                  type="radio"
-                  value={5}
-                  name={topic}
-                  onChange={handleMarkChange}
-                />
-                {topic}
-              </InputLabel>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gridColumn: '2 span'
+                }}
+                key={topic}
+              >
+                <InputLabel>{topic}</InputLabel>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    padding: '16px'
+                  }}
+                >
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginRight: '8px'
+                    }}
+                  >
+                    <Radio
+                      size="small"
+                      value={1}
+                      onChange={handleMarkChange}
+                    />
+                    <InputLabel>1</InputLabel>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginRight: '8px'
+                    }}
+                  >
+                    <Radio
+                      size="small"
+                      value={2}
+                      onChange={handleMarkChange}
+                    />
+                    <InputLabel>2</InputLabel>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginRight: '8px'
+                    }}
+                  >
+                    <Radio
+                      size="small"
+                      value={3}
+                      onChange={handleMarkChange}
+                    />
+                    <InputLabel>3</InputLabel>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginRight: '8px'
+                    }}
+                  >
+                    <Radio
+                      size="small"
+                      value={4}
+                      onChange={handleMarkChange}
+                    />
+                    <InputLabel>4</InputLabel>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginRight: '8px'
+                    }}
+                  >
+                    <Radio
+                      size="small"
+                      value={5}
+                      onChange={handleMarkChange}
+                    />
+                    <InputLabel>5</InputLabel>
+                  </div>
+                </div>
+              </div>
             );
           })}
-        <FormLabel>Otro tema:</FormLabel>
-        <Input type="text" name="tema" onChange={handleTemaChange}></Input>
-        <Button variant="contained" color="primary" onClick={handleSubmit}>
+        <FormLabel style={{ gridColumn: '1', padding: '16px 0' }}>
+          Otro tema:
+          <Input type="text" name="tema" onChange={handleTemaChange}></Input>
+        </FormLabel>
+        <Button
+          style={{ gridColumn: '2', gridRow: '8' }}
+          variant="contained"
+          color="primary"
+          onClick={handleSubmit}
+        >
           Siguiente
         </Button>
       </form>
