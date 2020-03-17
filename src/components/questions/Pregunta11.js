@@ -144,14 +144,13 @@ const Pregunta11 = ({ onSubmit }) => {
           Otro tema:
           <Input type="text" name="tema" onChange={handleTemaChange}></Input>
         </FormLabel>
-        <Button
-          style={{ gridColumn: '2', gridRow: '9' }}
+        <StyledButton
           variant="contained"
           color="primary"
           onClick={handleSubmit}
         >
           Siguiente
-        </Button>
+        </StyledButton>
       </form>
     </Styles>
   );
@@ -180,6 +179,18 @@ const TopicWrapper = styled.div`
   @media screen and (min-width: 800px) {
     & {
       margin-right: 8px;
+    }
+  }
+`;
+
+const StyledButton = styled(Button)`
+  width: 100%;
+  grid-column: 1/3;
+  grid-row: 9;
+
+  @media screen and (min-width: 450px) {
+    & {
+      grid-column: 2/3;
     }
   }
 `;

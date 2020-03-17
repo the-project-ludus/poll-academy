@@ -9,6 +9,16 @@ const Styles = styled.div`
   display: grid;
   min-width: 265px;
 
+  button {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 450px) {
+    button {
+      max-width: 250px;
+    }
+  }
+
   form.test-form {
     display: grid;
     grid-template-columns: 10em auto;
@@ -54,9 +64,14 @@ const Styles = styled.div`
 
     button {
       width: 100%;
-      max-width: 158px;
       justify-self: flex-end;
-      grid-column: 2/3;
+      grid-column: 1/3;
+    }
+
+    @media screen and (min-width: 450px) {
+      button {
+        max-width: 250px;
+      }
     }
   }
 
@@ -66,10 +81,14 @@ const Styles = styled.div`
 
     button {
       width: 100%;
-      max-width: 158px;
       justify-self: flex-end;
-      grid-column: 2;
-      grid-row: 2;
+      grid-column: 1/3;
+    }
+
+    @media screen and (min-width: 450px) {
+      button {
+        max-width: 250px;
+      }
     }
 
     ul {
@@ -130,14 +149,9 @@ const Styles = styled.div`
       }
     }
   }
-
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 600px) {
     .buttons {
       max-width: none;
-
-      button {
-        max-width: none;
-      }
     }
   }
 
