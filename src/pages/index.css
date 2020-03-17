@@ -13,3 +13,9 @@ button {
   margin-top: 20px;
   width: 200px;
 }
+
+.nomada-digital {
+  background-image: url(../assets/nomada-digital.webp);
+  width: 100%;
+  min-height: 500px;
+}
