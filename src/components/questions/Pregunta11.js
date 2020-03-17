@@ -21,7 +21,7 @@ const Pregunta11 = ({ onSubmit }) => {
         response: response,
         user: user,
         tema: tema,
-        marks: marks
+        marks: JSON.stringify(marks)
       }
     );
     onSubmit();
@@ -60,6 +60,14 @@ const Pregunta11 = ({ onSubmit }) => {
           />
           No
         </InputLabel>
+        {response && (
+          <FormLabel style={{ marginTop: '30px' }}>
+            <strong>
+              Valora de 1 a 5 tu inseres, donde 1 no me interesa y 5 es me
+              interesa mucho
+            </strong>
+          </FormLabel>
+        )}
         {response &&
           [
             'Profundización en React + React native',
@@ -137,7 +145,7 @@ const Pregunta11 = ({ onSubmit }) => {
           <Input type="text" name="tema" onChange={handleTemaChange}></Input>
         </FormLabel>
         <Button
-          style={{ gridColumn: '2', gridRow: '8' }}
+          style={{ gridColumn: '2', gridRow: '9' }}
           variant="contained"
           color="primary"
           onClick={handleSubmit}

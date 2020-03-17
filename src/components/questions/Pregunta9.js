@@ -1,12 +1,10 @@
-import React, { useContext } from 'react';
-import QuestionContext from '../../context/QuestionContext';
+import React from 'react';
 import { Button } from '@material-ui/core';
 import Styles from './Styles';
+import { navigate } from 'gatsby';
 
 const Pregunta9 = ({ onSubmit }) => {
-  const { questionId, setQuestionId } = useContext(QuestionContext);
-
-  const handleNo = () => setQuestionId(100); //Vamos a la pregunta 100 -- La de gracias por responder la encuesta
+  const handleNo = () => navigate('/adios/'); //Vamos a la pregunta 100 -- La de gracias por responder la encuesta
 
   return (
     <Styles>
