@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import { Button, Radio, Input, FormLabel, InputLabel } from '@material-ui/core';
+import { navigate } from 'gatsby';
 
 import UserContext from '../../context/UserContext';
 import Styles from './Styles';
@@ -24,7 +25,7 @@ const Pregunta15 = ({ onSubmit }) => {
         user: user
       }
     );
-    onSubmit();
+    navigate('/adios/');
   };
 
   const handleMoneyChange = ev => setMoney(ev.target.value);
