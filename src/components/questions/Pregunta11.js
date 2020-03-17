@@ -7,7 +7,7 @@ import Styles from './Styles';
 
 const Pregunta11 = ({ onSubmit }) => {
   const [response, setResponse] = useState('');
-  const [marks, setMarks] = useState([]);
+  const [marks, setMarks] = useState({});
   const [tema, setTema] = useState([]);
   const { user } = useContext(UserContext);
 
@@ -37,9 +37,10 @@ const Pregunta11 = ({ onSubmit }) => {
   const handleMarkChange = ev => {
     const value = ev.target.value;
     const name = ev.target.name;
-    marks[name] = value;
-    setMarks(marks);
-    console.log('marks', marks);
+    const theObject = {};
+    Object.assign(theObject, marks);
+    theObject[name] = value;
+    setMarks(theObject);
   };
 
   return (
@@ -94,6 +95,8 @@ const Pregunta11 = ({ onSubmit }) => {
                       size="small"
                       value={1}
                       onChange={handleMarkChange}
+                      name={topic}
+                      checked={marks[topic] === '1'}
                     />
                     <InputLabel>1</InputLabel>
                   </div>
@@ -108,6 +111,8 @@ const Pregunta11 = ({ onSubmit }) => {
                       size="small"
                       value={2}
                       onChange={handleMarkChange}
+                      name={topic}
+                      checked={marks[topic] === '2'}
                     />
                     <InputLabel>2</InputLabel>
                   </div>
@@ -122,6 +127,8 @@ const Pregunta11 = ({ onSubmit }) => {
                       size="small"
                       value={3}
                       onChange={handleMarkChange}
+                      name={topic}
+                      checked={marks[topic] === '3'}
                     />
                     <InputLabel>3</InputLabel>
                   </div>
@@ -136,6 +143,8 @@ const Pregunta11 = ({ onSubmit }) => {
                       size="small"
                       value={4}
                       onChange={handleMarkChange}
+                      name={topic}
+                      checked={marks[topic] === '4'}
                     />
                     <InputLabel>4</InputLabel>
                   </div>
@@ -150,6 +159,8 @@ const Pregunta11 = ({ onSubmit }) => {
                       size="small"
                       value={5}
                       onChange={handleMarkChange}
+                      name={topic}
+                      checked={marks[topic] === '5'}
                     />
                     <InputLabel>5</InputLabel>
                   </div>
