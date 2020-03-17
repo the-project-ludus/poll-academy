@@ -31,11 +31,10 @@ const Pregunta6 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 6</h1>
-      <FormLabel>
+      <h2>
         ¿Crees que aprenderías mas o aprovecharías mas el curso, haciendo
         sesiones online durante la semana para reforzar ampliar temas?
-      </FormLabel>
+      </h2>
       <form className="test-form">
         <InputLabel>
           <Radio

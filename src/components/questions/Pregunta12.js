@@ -27,10 +27,7 @@ const Pregunta12 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 12</h1>
-      <FormLabel>
-        ¿Cuando crees que costaría un curso de especialización como este?
-      </FormLabel>
+      <h2>¿Cuando crees que costaría un curso de especialización como este?</h2>
       <form className="textarea-form">
         <TextareaAutosize
           rows={8}

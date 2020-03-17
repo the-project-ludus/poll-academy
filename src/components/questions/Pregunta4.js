@@ -13,8 +13,7 @@ const Pregunta4 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 4</h1>
-      <FormLabel>¿Con que ejercicios sientes que has aprendido más?</FormLabel>
+      <h2>¿Con que ejercicios sientes que has aprendido más?</h2>
       <form className="test-form" name="pregunta4">
         <ul>
           {challengeList.map(topic => (

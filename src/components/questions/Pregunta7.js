@@ -20,8 +20,7 @@ const Pregunta7 = ({ onSubmit }) => {
   return (
     <Styles>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <h1>Pregunta 7</h1>
-        <FormLabel>¿Como te gustaría que fueran esas sesiones?</FormLabel>
+        <h2>¿Como te gustaría que fueran esas sesiones?</h2>
         <form className="no-grid">
           <ul style={{ listStyle: 'none' }}>
             {topicList.map(topic => (

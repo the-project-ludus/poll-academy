@@ -35,10 +35,7 @@ const Pregunta8 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 8</h1>
-      <FormLabel>
-        ¿Considerías apuntarte a estas sesiones por un precio de 450€?
-      </FormLabel>
+      <h2>¿Considerías apuntarte a estas sesiones por un precio de 450€?</h2>
       <form className="test-form">
         <InputLabel>
           <Radio

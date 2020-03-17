@@ -23,10 +23,10 @@ const Pregunta13 = ({ onSubmit }) => {
   const handleNo = () => submit('No');
   return (
     <Styles>
-      <h1>
+      <h2>
         ¿Te gustaría que el curso incluyera dinámicas para trabajar en remoto
         que te orientara a ser un nómada digital?
-      </h1>
+      </h2>
       <div class="nomada-digital"></div>
       <div className="buttons">
         <Button variant="contained" color="primary" onClick={handleYes}>

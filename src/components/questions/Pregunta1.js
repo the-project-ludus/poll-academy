@@ -13,11 +13,10 @@ const Pregunta1 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 1</h1>
-      <FormLabel>
+      <h2>
         Marca los 5 temas a los que, desde tu punto de vista, crees que le ha
         faltado un poco más explicación:
-      </FormLabel>
+      </h2>
       <form className="test-form" name="pregunta1">
         <ul>
           {topicList.map(topic => (

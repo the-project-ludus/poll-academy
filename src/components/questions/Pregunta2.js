@@ -13,10 +13,7 @@ const Pregunta2 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 2</h1>
-      <FormLabel>
-        Marca los 5 temas sobre los que te gustaría seguir profundizando:
-      </FormLabel>
+      <h2>Marca los 5 temas sobre los que te gustaría seguir profundizando:</h2>
       <form className="test-form" name="pregunta2">
         <ul>
           {topicList.map(topic => (
