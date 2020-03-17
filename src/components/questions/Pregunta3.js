@@ -13,10 +13,7 @@ const Pregunta3 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 3</h1>
-      <FormLabel>
-        Marca los temas donde has echado de menos más ejercicios.
-      </FormLabel>
+      <h2>Marca los temas donde has echado de menos más ejercicios.</h2>
       <form className="test-form" name="pregunta3">
         <ul>
           {topicList.map(topic => (

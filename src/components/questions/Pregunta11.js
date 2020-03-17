@@ -7,7 +7,7 @@ import Styles from './Styles';
 
 const Pregunta11 = ({ onSubmit }) => {
   const [response, setResponse] = useState('');
-  const [marks, setMarks] = useState([]);
+  const [marks, setMarks] = useState({});
   const [tema, setTema] = useState([]);
   const { user } = useContext(UserContext);
 
@@ -20,7 +20,7 @@ const Pregunta11 = ({ onSubmit }) => {
         response: response,
         user: user,
         tema: tema,
-        marks: marks
+        marks: JSON.stringify(marks)
       }
     );
     onSubmit();
@@ -37,16 +37,16 @@ const Pregunta11 = ({ onSubmit }) => {
   const handleMarkChange = ev => {
     const value = ev.target.value;
     const name = ev.target.name;
-    marks[name] = value;
-    setMarks(marks);
-    console.log('marks', marks);
+    const theObject = {};
+    Object.assign(theObject, marks);
+    theObject[name] = value;
+    setMarks(theObject);
   };
 
   return (
     <Styles>
-      <h1>Pregunta 11</h1>
-      <FormLabel>¿Te apuntarías a un curso de especialización?</FormLabel>
-      <form>
+      <h2>¿Te apuntarías a un curso de especialización?</h2>
+      <form style={{ display: 'grid', gridTemplateColumns: '1fr auto' }}>
         <InputLabel>
           <Radio value="true" checked={response} onChange={handleRadioChange} />
           Sí
@@ -59,6 +59,14 @@ const Pregunta11 = ({ onSubmit }) => {
           />
           No
         </InputLabel>
+        {response && (
+          <FormLabel style={{ marginTop: '30px' }}>
+            <strong>
+              Valora de 1 a 5 tu inseres, donde 1 no me interesa y 5 es me
+              interesa mucho
+            </strong>
+          </FormLabel>
+        )}
         {response &&
           [
             'Profundización en React + React native',
@@ -68,44 +76,116 @@ const Pregunta11 = ({ onSubmit }) => {
             'Arquitectura Front-End  + otros frameworks, Angular, Vue.js..'
           ].map(topic => {
             return (
-              <InputLabel key={topic}>
-                <input
-                  type="radio"
-                  value={1}
-                  name={topic}
-                  onChange={handleMarkChange}
-                />
-                <input
-                  type="radio"
-                  value={2}
-                  name={topic}
-                  onChange={handleMarkChange}
-                />
-                <input
-                  type="radio"
-                  value={3}
-                  name={topic}
-                  onChange={handleMarkChange}
-                />
-                <input
-                  type="radio"
-                  value={4}
-                  name={topic}
-                  onChange={handleMarkChange}
-                />
-                <input
-                  type="radio"
-                  value={5}
-                  name={topic}
-                  onChange={handleMarkChange}
-                />
-                {topic}
-              </InputLabel>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gridColumn: '2 span'
+                }}
+                key={topic}
+              >
+                <InputLabel>{topic}</InputLabel>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    padding: '16px'
+                  }}
+                >
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginRight: '8px'
+                    }}
+                  >
+                    <Radio
+                      size="small"
+                      value={1}
+                      onChange={handleMarkChange}
+                      name={topic}
+                      checked={marks[topic] === '1'}
+                    />
+                    <InputLabel>1</InputLabel>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginRight: '8px'
+                    }}
+                  >
+                    <Radio
+                      size="small"
+                      value={2}
+                      onChange={handleMarkChange}
+                      name={topic}
+                      checked={marks[topic] === '2'}
+                    />
+                    <InputLabel>2</InputLabel>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginRight: '8px'
+                    }}
+                  >
+                    <Radio
+                      size="small"
+                      value={3}
+                      onChange={handleMarkChange}
+                      name={topic}
+                      checked={marks[topic] === '3'}
+                    />
+                    <InputLabel>3</InputLabel>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginRight: '8px'
+                    }}
+                  >
+                    <Radio
+                      size="small"
+                      value={4}
+                      onChange={handleMarkChange}
+                      name={topic}
+                      checked={marks[topic] === '4'}
+                    />
+                    <InputLabel>4</InputLabel>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      marginRight: '8px'
+                    }}
+                  >
+                    <Radio
+                      size="small"
+                      value={5}
+                      onChange={handleMarkChange}
+                      name={topic}
+                      checked={marks[topic] === '5'}
+                    />
+                    <InputLabel>5</InputLabel>
+                  </div>
+                </div>
+              </div>
             );
           })}
-        <FormLabel>Otro tema:</FormLabel>
-        <Input type="text" name="tema" onChange={handleTemaChange}></Input>
-        <Button variant="contained" color="primary" onClick={handleSubmit}>
+        <FormLabel style={{ gridColumn: '1', padding: '16px 0' }}>
+          Otro tema:
+          <Input type="text" name="tema" onChange={handleTemaChange}></Input>
+        </FormLabel>
+        <Button
+          style={{ gridColumn: '2', gridRow: '9' }}
+          variant="contained"
+          color="primary"
+          onClick={handleSubmit}
+        >
           Siguiente
         </Button>
       </form>

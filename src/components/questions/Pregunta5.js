@@ -43,8 +43,7 @@ const Pregunta5 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 5</h1>
-      <FormLabel>¿Algun ejercicio te ha parecido demasiado difícil?</FormLabel>
+      <h2>¿Algun ejercicio te ha parecido demasiado difícil?</h2>
       <form className="test-form">
         <InputLabel>
           <Radio
