@@ -45,8 +45,7 @@ const Pregunta11 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 11</h1>
-      <FormLabel>¿Te apuntarías a un curso de especialización?</FormLabel>
+      <h2>¿Te apuntarías a un curso de especialización?</h2>
       <form style={{ display: 'grid', gridTemplateColumns: '1fr auto' }}>
         <InputLabel>
           <Radio value="true" checked={response} onChange={handleRadioChange} />

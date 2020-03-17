@@ -26,8 +26,7 @@ const Pregunta10 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 10</h1>
-      <FormLabel>¿Por donde te gustaría seguir tu formación?</FormLabel>
+      <h2>¿Por donde te gustaría seguir tu formación?</h2>
       <form className="textarea-form">
         <TextareaAutosize
           rows={8}

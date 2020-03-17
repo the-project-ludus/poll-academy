@@ -37,11 +37,10 @@ const Pregunta15 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h1>Pregunta 15</h1>
-      <FormLabel>
-        ¿Considerías apuntarte a un curso de especializacion como este por un
-        precio de 3000€?
-      </FormLabel>
+      <h2>
+        ¿Si se hiciera el curso de especialización con todos los parametros que
+        has elegido, considerarias su precio justo 3000€?
+      </h2>
       <form className="test-form">
         <InputLabel>
           <Radio
