@@ -19,7 +19,7 @@ const Pregunta15 = ({ onSubmit }) => {
       'https://the-project-ludus-poll.firebaseio.com/questions.json',
       {
         pregunta:
-          '¿Si se hiciera el curso de especialización con tus propuestas, lo contratarias por 3000€?',
+          '¿Queremos hacer un curso como el que has propuesto, lo contratarias por 3000€?',
         response: response,
         money: money,
         user: user
@@ -38,8 +38,8 @@ const Pregunta15 = ({ onSubmit }) => {
   return (
     <Styles>
       <h2>
-        ¿Si se hiciera el curso de especialización con tus propuestas, lo
-        contratarias por 3000€?
+        ¿Queremos hacer un curso como el que has propuesto, lo contratarias por
+        3000€?
       </h2>
       <form className="test-form">
         <InputLabel>
