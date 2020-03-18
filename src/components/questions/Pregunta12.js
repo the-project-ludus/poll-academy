@@ -16,7 +16,7 @@ const Pregunta12 = ({ onSubmit }) => {
       'https://the-project-ludus-poll.firebaseio.com/questions.json',
       {
         pregunta:
-          '¿Cuando crees que costaría un curso de especialización como este?',
+          '¿Cómo crees que se podría mejorar la dinámica durante el curso?',
         response: response,
         user: user
       }
@@ -27,7 +27,7 @@ const Pregunta12 = ({ onSubmit }) => {
 
   return (
     <Styles>
-      <h2>¿Cuando crees que costaría un curso de especialización como este?</h2>
+      <h2>¿Cómo crees que se podría mejorar la dinámica durante el curso?</h2>
       <form className="textarea-form">
         <TextareaAutosize
           rows={8}

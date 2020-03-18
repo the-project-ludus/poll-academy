@@ -140,10 +140,13 @@ const Pregunta11 = ({ onSubmit }) => {
               </RadioGroup>
             );
           })}
-        <FormLabel style={{ gridColumn: '1', padding: '16px 0' }}>
-          Otro tema:
-          <Input type="text" name="tema" onChange={handleTemaChange}></Input>
-        </FormLabel>
+        {response && (
+          <FormLabel style={{ gridColumn: '1', padding: '16px 0' }}>
+            Otro tema:
+            <Input type="text" name="tema" onChange={handleTemaChange}></Input>
+          </FormLabel>
+        )}
+
         <StyledButton
           variant="contained"
           color="primary"
