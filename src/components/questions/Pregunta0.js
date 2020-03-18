@@ -44,7 +44,11 @@ const Pregunta0 = ({ onSubmit }) => {
         <FormLabel>
           <strong style={{ color: error ? 'red' : 'inherit' }}>E-mail*:</strong>
         </FormLabel>
-        <Input type="email" onChange={handleEmailChange}></Input>
+        <Input
+          type="email"
+          style={{ color: error ? 'red' : 'inherit' }}
+          onChange={handleEmailChange}
+        ></Input>
         <Button variant="contained" color="primary" onClick={handleSubmit}>
           Siguiente
         </Button>
