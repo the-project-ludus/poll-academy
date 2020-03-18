@@ -11,7 +11,7 @@ const Pregunta10 = ({ onSubmit }) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    console.log('user', user);
+    //console.log('user', user);
     await axios.post(
       'https://the-project-ludus-poll.firebaseio.com/questions.json',
       {

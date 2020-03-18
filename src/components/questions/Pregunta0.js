@@ -15,7 +15,7 @@ const Pregunta0 = ({ onSubmit }) => {
     e.preventDefault();
     if (email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
       setUser(email);
-      console.log('user', user);
+      //console.log('user', user);
       await axios.post(
         'https://the-project-ludus-poll.firebaseio.com/questions.json',
         {

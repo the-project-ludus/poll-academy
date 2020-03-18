@@ -13,11 +13,11 @@ const Pregunta8 = ({ onSubmit }) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    console.log('user', user);
+    //console.log('user', user);
     await axios.post(
       'https://the-project-ludus-poll.firebaseio.com/questions.json',
       {
-        pregunta: '¿Cuanto pagarías por acceder a esas sesiones online?',
+        pregunta: '¿Considerías apuntarte a estas sesiones por un precio de 450€?',
         response: response,
         money: money,
         user: user

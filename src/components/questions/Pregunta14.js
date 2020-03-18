@@ -12,7 +12,7 @@ const topicList = [
 
 const Pregunta14 = ({ onSubmit }) => {
   const [handleSubmit, handleCheboxChange] = useCheckboxListQuestions(
-    '¿Como te gustaría que fueran esas sesiones?',
+    '¿Cómo preferirías que fuera el curso?',
     onSubmit
   );
 
