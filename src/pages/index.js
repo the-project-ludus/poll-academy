@@ -10,7 +10,7 @@ import { MobileStepper } from '@material-ui/core';
 import './index.css';
 
 const IndexPage = () => {
-  const [questionId, setQuestionId] = useState(1);
+  const [questionId, setQuestionId] = useState(0);
   const [user, setUser] = useState('');
   const questionComponents = useQuestions(() => setQuestionId(questionId + 1));
 
